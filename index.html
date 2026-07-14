@@ -1,69 +1,939 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Katie Joly | Copywriter for Birth Professionals</title>
 
-<meta name="description" content="Warm, strategic copywriting and marketing for doulas, midwives, birth educators, lactation consultants, and birth professionals.">
-
-<meta property="og:title" content="Katie Joly">
-<meta property="og:description" content="Words that connect. Care that shows.">
+<meta name="description"
+content="Copywriting and marketing strategy for doulas, midwives, birth educators and maternal health professionals.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500;6..72,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400;500;600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css">
+<style>
 
-</head>
+:root{
 
-<body>
+--cream:#faf7f3;
+
+--section:#f3ece5;
+
+--white:#ffffff;
+
+--text:#413934;
+
+--light:#7f746d;
+
+--accent:#c99a86;
+
+--accent-dark:#b88572;
+
+--border:#ebe2dc;
+
+--max:1240px;
+
+}
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:'Source Sans 3',sans-serif;
+
+background:var(--cream);
+
+color:var(--text);
+
+font-size:19px;
+
+font-weight:300;
+
+line-height:1.8;
+
+-webkit-font-smoothing:antialiased;
+
+}
+
+img{
+
+display:block;
+
+width:100%;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+transition:.35s;
+
+}
+
+.container{
+
+max-width:var(--max);
+
+margin:auto;
+
+padding:0 48px;
+
+}
+
+/* ============================= */
+
+header{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:42px 0;
+
+z-index:50;
+
+}
+
+header .container{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.logo img{
+
+height:68px;
+
+width:auto;
+
+}
+
+nav{
+
+display:flex;
+
+align-items:center;
+
+gap:42px;
+
+}
+
+nav a{
+
+font-size:12px;
+
+letter-spacing:.18em;
+
+text-transform:uppercase;
+
+font-weight:600;
+
+}
+
+.contact-btn{
+
+padding:15px 30px;
+
+background:var(--accent);
+
+color:white;
+
+border-radius:3px;
+
+}
+
+.contact-btn:hover{
+
+background:var(--accent-dark);
+
+}
+
+/* ============================= */
+
+.hero{
+
+padding-top:180px;
+
+padding-bottom:120px;
+
+}
+
+.hero-grid{
+
+display:grid;
+
+grid-template-columns:48% 52%;
+
+align-items:center;
+
+gap:80px;
+
+}
+
+.hero-copy{
+
+max-width:520px;
+
+}
+
+.eyebrow{
+
+font-size:12px;
+
+letter-spacing:.22em;
+
+text-transform:uppercase;
+
+font-weight:600;
+
+margin-bottom:14px;
+
+color:var(--accent-dark);
+
+}
+
+.sub{
+
+font-family:'Newsreader',serif;
+
+font-style:italic;
+
+font-size:26px;
+
+margin-bottom:26px;
+
+}
+
+.hero h1{
+
+font-family:'Newsreader',serif;
+
+font-size:84px;
+
+line-height:1.02;
+
+font-weight:400;
+
+margin-bottom:34px;
+
+letter-spacing:-.02em;
+
+}
+
+.hero p{
+
+color:var(--light);
+
+margin-bottom:42px;
+
+max-width:470px;
+
+}
+
+.primary{
+
+display:inline-block;
+
+padding:18px 34px;
+
+background:var(--accent);
+
+color:white;
+
+text-transform:uppercase;
+
+font-size:13px;
+
+letter-spacing:.18em;
+
+font-weight:600;
+
+border-radius:3px;
+
+}
+
+.primary:hover{
+
+background:var(--accent-dark);
+
+transform:translateY(-2px);
+
+}
+
+.hero-photo{
+
+height:760px;
+
+overflow:hidden;
+
+}
+
+.hero-photo img{
+
+height:100%;
+
+object-fit:cover;
+
+transition:8s;
+
+}
+
+.hero-photo:hover img{
+
+transform:scale(1.03);
+
+}
+
+/* ================================= */
+
+.divider{
+
+background:var(--section);
+
+padding:90px 0;
+
+text-align:center;
+
+}
+
+.divider p{
+
+font-family:'Newsreader',serif;
+
+font-size:40px;
+
+line-height:1.45;
+
+max-width:760px;
+
+margin:auto;
+
+}
+
+/* ================================= */
+
+section{
+
+padding:120px 0;
+
+}
+
+.section-label{
+
+font-size:12px;
+
+letter-spacing:.2em;
+
+text-transform:uppercase;
+
+font-weight:600;
+
+margin-bottom:18px;
+
+color:var(--accent-dark);
+
+}
+
+h2{
+
+font-family:'Newsreader',serif;
+
+font-size:58px;
+
+font-weight:400;
+
+margin-bottom:70px;
+
+line-height:1.1;
+
+} /* ==========================================
+   SERVICES
+========================================== */
+
+.services{
+
+background:white;
+
+}
+
+.services-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:70px;
+
+}
+
+.service{
+
+padding-right:25px;
+
+}
+
+.service-number{
+
+font-family:'Newsreader',serif;
+
+font-size:68px;
+
+color:var(--accent);
+
+margin-bottom:18px;
+
+line-height:1;
+
+}
+
+.service h3{
+
+font-family:'Newsreader',serif;
+
+font-size:34px;
+
+font-weight:400;
+
+margin-bottom:20px;
+
+}
+
+.service p{
+
+color:var(--light);
+
+margin-bottom:26px;
+
+}
+
+.service a{
+
+font-size:13px;
+
+letter-spacing:.15em;
+
+text-transform:uppercase;
+
+font-weight:600;
+
+color:var(--accent-dark);
+
+}
+
+.service a:hover{
+
+letter-spacing:.18em;
+
+}
+
+
+
+/* ==========================================
+ABOUT
+========================================== */
+
+.about{
+
+background:var(--cream);
+
+}
+
+.about-wrapper{
+
+max-width:860px;
+
+}
+
+.about-wrapper p{
+
+margin-bottom:28px;
+
+font-size:22px;
+
+color:var(--light);
+
+}
+
+.signature{
+
+font-family:'Newsreader',serif;
+
+font-size:34px;
+
+margin-top:40px;
+
+}
+
+
+
+/* ==========================================
+PROCESS
+========================================== */
+
+.process{
+
+background:white;
+
+}
+
+.timeline{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:40px;
+
+margin-top:40px;
+
+}
+
+.step{
+
+position:relative;
+
+padding-top:20px;
+
+}
+
+.step::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:70px;
+
+height:2px;
+
+background:var(--accent);
+
+}
+
+.step span{
+
+display:block;
+
+font-family:'Newsreader',serif;
+
+font-size:60px;
+
+color:var(--accent);
+
+margin-bottom:20px;
+
+}
+
+.step h3{
+
+font-family:'Newsreader',serif;
+
+font-size:30px;
+
+font-weight:400;
+
+margin-bottom:16px;
+
+}
+
+.step p{
+
+color:var(--light);
+
+}
+
+
+
+/* ==========================================
+QUOTE
+========================================== */
+
+.quote{
+
+padding:150px 0;
+
+background:var(--section);
+
+text-align:center;
+
+}
+
+.quote blockquote{
+
+font-family:'Newsreader',serif;
+
+font-size:46px;
+
+max-width:860px;
+
+margin:auto;
+
+line-height:1.5;
+
+}
+
+.quote cite{
+
+display:block;
+
+margin-top:36px;
+
+font-style:normal;
+
+font-size:13px;
+
+letter-spacing:.18em;
+
+text-transform:uppercase;
+
+font-weight:600;
+
+color:var(--accent-dark);
+
+}
+
+
+
+/* ==========================================
+CTA
+========================================== */
+
+.cta{
+
+background:#d9b8a9;
+
+color:white;
+
+text-align:center;
+
+padding:150px 0;
+
+}
+
+.cta h2{
+
+color:white;
+
+margin-bottom:25px;
+
+}
+
+.cta p{
+
+max-width:700px;
+
+margin:auto;
+
+margin-bottom:40px;
+
+font-size:23px;
+
+color:rgba(255,255,255,.92);
+
+}
+
+.cta .primary{
+
+background:white;
+
+color:var(--accent-dark);
+
+}
+
+.cta .primary:hover{
+
+background:#fafafa;
+
+}
+
+
+
+/* ==========================================
+FOOTER
+========================================== */
+
+footer{
+
+background:white;
+
+padding:70px 0;
+
+border-top:1px solid var(--border);
+
+}
+
+.footer-grid{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.footer-left h3{
+
+font-family:'Newsreader',serif;
+
+font-size:32px;
+
+font-weight:400;
+
+margin-bottom:10px;
+
+}
+
+.footer-left p{
+
+color:var(--light);
+
+}
+
+.footer-right{
+
+display:flex;
+
+gap:28px;
+
+}
+
+.footer-right a{
+
+font-size:13px;
+
+letter-spacing:.18em;
+
+text-transform:uppercase;
+
+font-weight:600;
+
+}
+
+
+
+/* ==========================================
+ANIMATIONS
+========================================== */
+
+.fade{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s ease;
+
+}
+
+.fade.visible{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+
+/* ==========================================
+RESPONSIVE
+========================================== */
+
+@media(max-width:1050px){
+
+.hero-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-copy{
+
+order:2;
+
+max-width:100%;
+
+}
+
+.hero-photo{
+
+order:1;
+
+height:540px;
+
+}
+
+.services-grid{
+
+grid-template-columns:1fr;
+
+gap:60px;
+
+}
+
+.timeline{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.footer-grid{
+
+flex-direction:column;
+
+gap:40px;
+
+text-align:center;
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+.container{
+
+padding:0 24px;
+
+}
+
+nav a:not(.contact-btn){
+
+display:none;
+
+}
+
+.hero{
+
+padding-top:120px;
+
+}
+
+.hero h1{
+
+font-size:56px;
+
+}
+
+.hero-photo{
+
+height:420px;
+
+}
+
+.divider p{
+
+font-size:30px;
+
+}
+
+h2{
+
+font-size:44px;
+
+}
+
+.timeline{
+
+grid-template-columns:1fr;
+
+}
+
+.primary{
+
+width:100%;
+
+text-align:center;
+
+}
+
+}
+
+</style> <body>
 
 <header>
 
-<div class="container">
+    <div class="container">
 
-<div class="logo">
+        <div class="logo">
 
-<!-- Replace with your logo -->
+            <!-- Replace with your logo -->
+            <img src="images/logo.png" alt="Katie Joly">
 
-<img src="images/logo.png" alt="Katie Joly">
+        </div>
 
-</div>
+        <nav>
 
-<nav>
+            <a href="#about">About</a>
 
-<a href="#about">About</a>
+            <a href="#services">Services</a>
 
-<a href="#services">Services</a>
+            <a href="#process">Process</a>
 
-<a href="#process">Process</a>
+            <a href="#contact">Contact</a>
 
-<a href="#contact">Contact</a>
+            <a class="contact-btn" href="mailto:kitjoly@gmail.com">
 
-<a class="button-nav" href="mailto:kitjoly@gmail.com">
+                Let's Work Together
 
-Let's Work Together
+            </a>
 
-</a>
+        </nav>
 
-</nav>
-
-</div>
+    </div>
 
 </header>
 
 
 
+<!-- HERO -->
+
 <section class="hero">
 
-<div class="container hero-grid">
+<div class="container">
 
-<div class="hero-copy">
+<div class="hero-grid">
+
+<div class="hero-copy fade">
 
 <p class="eyebrow">
 
@@ -71,9 +941,9 @@ COPYWRITER & MARKETING STRATEGIST
 
 </p>
 
-<p class="eyebrow-sub">
+<p class="sub">
 
-for birth service professionals
+for birth professionals
 
 </p>
 
@@ -85,17 +955,17 @@ Care that shows.
 
 </h1>
 
-<p class="hero-text">
+<p>
 
 You already provide exceptional care.
 
-I'll help your website communicate it with warm, strategic messaging that builds trust, attracts your ideal clients, and grows your practice.
+Your website should communicate it just as beautifully.
+
+I help doulas, midwives, lactation consultants and birth educators attract more of the families they're meant to serve through thoughtful messaging and intentional strategy.
 
 </p>
 
-<div class="hero-buttons">
-
-<a href="mailto:kitjoly@gmail.com" class="button-primary">
+<a class="primary" href="mailto:kitjoly@gmail.com">
 
 Let's Tell Your Story
 
@@ -103,11 +973,15 @@ Let's Tell Your Story
 
 </div>
 
+
+
+<div class="hero-photo fade">
+
+<img src="images/hero.jpg"
+
+alt="Katie Joly">
+
 </div>
-
-<div class="hero-image">
-
-<img src="images/hero.jpg" alt="Katie Joly">
 
 </div>
 
@@ -117,7 +991,9 @@ Let's Tell Your Story
 
 
 
-<section class="intro">
+<!-- DIVIDER -->
+
+<section class="divider">
 
 <div class="container">
 
@@ -127,7 +1003,7 @@ Thoughtful copy.
 
 Ethical marketing.
 
-Meaningful growth for the professionals changing birth experiences every day.
+More visibility for the work that matters most.
 
 </p>
 
@@ -137,13 +1013,13 @@ Meaningful growth for the professionals changing birth experiences every day.
 
 
 
+<!-- SERVICES -->
+
 <section id="services" class="services">
 
 <div class="container">
 
-<div class="section-heading">
-
-<p class="small-title">
+<p class="section-label">
 
 SERVICES
 
@@ -155,11 +1031,19 @@ How I Can Help
 
 </h2>
 
-</div>
+
 
 <div class="services-grid">
 
-<div class="service-card">
+
+
+<div class="service fade">
+
+<div class="service-number">
+
+01
+
+</div>
 
 <h3>
 
@@ -169,13 +1053,27 @@ Website Copywriting
 
 <p>
 
-Clear, compassionate messaging that helps families understand exactly why you're the right fit.
+Warm, strategic copy that helps potential clients immediately understand your value and trust you before they ever schedule a consultation.
 
 </p>
 
+<a href="mailto:kitjoly@gmail.com">
+
+Learn More →
+
+</a>
+
 </div>
 
-<div class="service-card">
+
+
+<div class="service fade">
+
+<div class="service-number">
+
+02
+
+</div>
 
 <h3>
 
@@ -185,27 +1083,49 @@ Marketing Strategy
 
 <p>
 
-Practical marketing guidance designed specifically for birth professionals who want sustainable growth.
+Thoughtful marketing guidance designed specifically for birth professionals who want sustainable growth without feeling salesy.
 
 </p>
 
+<a href="mailto:kitjoly@gmail.com">
+
+Learn More →
+
+</a>
+
 </div>
 
-<div class="service-card">
+
+
+<div class="service fade">
+
+<div class="service-number">
+
+03
+
+</div>
 
 <h3>
 
-Brand Messaging
+Messaging Intensive
 
 </h3>
 
 <p>
 
-Discover the language that makes your practice memorable, trustworthy, and unmistakably yours.
+Clarify exactly what makes your practice different so your dream clients instantly recognize that they're in the right place.
 
 </p>
 
+<a href="mailto:kitjoly@gmail.com">
+
+Learn More →
+
+</a>
+
 </div>
+
+
 
 </div>
 
@@ -215,19 +1135,15 @@ Discover the language that makes your practice memorable, trustworthy, and unmis
 
 
 
+<!-- ABOUT -->
+
 <section id="about" class="about">
 
-<div class="container about-grid">
+<div class="container">
 
-<div class="about-image">
+<div class="about-wrapper fade">
 
-<img src="images/profile.jpg" alt="Katie Joly">
-
-</div>
-
-<div class="about-content">
-
-<p class="small-title">
+<p class="section-label">
 
 ABOUT
 
@@ -241,21 +1157,29 @@ Hi, I'm Katie.
 
 <p>
 
-As a copywriter with a passion for supporting birth professionals, I believe your website should reflect the same warmth, confidence, and compassion you bring to every client.
+I believe the people changing birth experiences deserve websites that reflect the incredible care they provide.
 
 </p>
 
 <p>
 
-Whether you're a doula, midwife, educator, lactation consultant, or birth center, I'll help you communicate your value with messaging that feels authentic and converts visitors into inquiries.
+Too often, amazing birth professionals blend into the crowd simply because their messaging doesn't fully capture the warmth, confidence, and expertise they bring to every family.
 
 </p>
 
-<a href="mailto:kitjoly@gmail.com" class="text-link">
+<p>
 
-Let's work together →
+That's where I come in.
 
-</a>
+Together we'll create clear, compassionate messaging that builds trust, strengthens your brand, and helps more families find the support they're looking for.
+
+</p>
+
+<div class="signature">
+
+Katie Joly
+
+</div>
 
 </div>
 
@@ -265,11 +1189,13 @@ Let's work together →
 
 
 
+<!-- PROCESS -->
+
 <section id="process" class="process">
 
 <div class="container">
 
-<p class="small-title">
+<p class="section-label">
 
 PROCESS
 
@@ -277,63 +1203,79 @@ PROCESS
 
 <h2>
 
-Simple. Collaborative. Strategic.
+A Simple Process Designed Around You
 
 </h2>
 
-<div class="process-grid">
+<div class="timeline">
 
-<div>
+<div class="step fade">
 
 <span>01</span>
 
-<h3>Discover</h3>
+<h3>
+
+Discover
+
+</h3>
 
 <p>
 
-We identify your goals, audience, and opportunities.
+We'll dive into your business, audience and goals.
 
 </p>
 
 </div>
 
-<div>
+<div class="step fade">
 
 <span>02</span>
 
-<h3>Strategy</h3>
+<h3>
+
+Strategize
+
+</h3>
 
 <p>
 
-We clarify your messaging and positioning.
+We'll develop messaging that reflects your values and connects with the families you serve.
 
 </p>
 
 </div>
 
-<div>
+<div class="step fade">
 
 <span>03</span>
 
-<h3>Write</h3>
+<h3>
+
+Write
+
+</h3>
 
 <p>
 
-Every page is crafted with warmth and intention.
+I'll transform everything into polished, conversion-focused copy.
 
 </p>
 
 </div>
 
-<div>
+<div class="step fade">
 
 <span>04</span>
 
-<h3>Launch</h3>
+<h3>
+
+Launch
+
+</h3>
 
 <p>
 
-Confidently share a website you're proud of.
+Publish your new messaging with confidence and start attracting more aligned clients.
 
 </p>
 
@@ -343,83 +1285,236 @@ Confidently share a website you're proud of.
 
 </div>
 
+</section> 
+  <!-- TESTIMONIAL -->
+
+<section class="quote">
+
+    <div class="container">
+
+        <blockquote>
+
+            "Katie has a gift for taking scattered thoughts and transforming them into words that truly reflect my business. She helped me sound like myself—only clearer, warmer, and more confident."
+
+        </blockquote>
+
+        <cite>
+
+            — CLIENT TESTIMONIAL COMING SOON
+
+        </cite>
+
+    </div>
+
 </section>
 
 
 
-<section class="testimonial">
-
-<div class="container">
-
-<blockquote>
-
-"Katie has an incredible ability to take scattered thoughts and turn them into words that genuinely connect with the people I want to serve."
-
-</blockquote>
-
-<p>
-
-— Future Client
-
-</p>
-
-</div>
-
-</section>
-
-
+<!-- FINAL CALL TO ACTION -->
 
 <section id="contact" class="cta">
 
-<div class="container">
+    <div class="container fade">
 
-<h2>
+        <p class="section-label" style="color:white;opacity:.85;">
 
-Ready to tell your story?
+            READY TO GROW?
 
-</h2>
+        </p>
 
-<p>
+        <h2>
 
-Let's create messaging that reflects the incredible work you already do.
+            Let's create a website that reflects the care you already provide.
 
-</p>
+        </h2>
 
-<a href="mailto:kitjoly@gmail.com" class="button-primary">
+        <p>
 
-Let's Work Together
+            Whether you're launching a brand-new practice or refreshing an existing website, I'll help you communicate your value with thoughtful messaging that attracts the right families.
 
-</a>
+        </p>
 
-</div>
+        <a class="primary" href="mailto:kitjoly@gmail.com?subject=Let's%20Work%20Together">
+
+            LET'S WORK TOGETHER
+
+        </a>
+
+    </div>
 
 </section>
 
 
 
+<!-- FOOTER -->
+
 <footer>
 
-<div class="container">
+    <div class="container">
 
-<p>
+        <div class="footer-grid">
 
-© 2026 Katie Joly
+            <div class="footer-left">
 
-</p>
+                <h3>
 
-<p>
+                    Katie Joly
 
-Based in South Carolina • Serving birth professionals nationwide
+                </h3>
 
-</p>
+                <p>
 
-</div>
+                    Copywriter & Marketing Strategist
+
+                </p>
+
+                <p>
+
+                    Serving birth professionals nationwide.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-right">
+
+                <a href="#about">
+
+                    About
+
+                </a>
+
+                <a href="#services">
+
+                    Services
+
+                </a>
+
+                <a href="#process">
+
+                    Process
+
+                </a>
+
+                <a href="mailto:kitjoly@gmail.com">
+
+                    Contact
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </footer>
 
 
 
-<script src="script.js"></script>
+<script>
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+anchor.addEventListener('click',function(e){
+
+e.preventDefault();
+
+const target=document.querySelector(this.getAttribute('href'));
+
+if(target){
+
+target.scrollIntoView({
+
+behavior:'smooth'
+
+});
+
+}
+
+});
+
+});
+
+
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('visible');
+
+}
+
+});
+
+},{
+
+threshold:.15
+
+});
+
+
+
+document.querySelectorAll('.fade').forEach(item=>{
+
+observer.observe(item);
+
+});
+
+
+
+const header=document.querySelector("header");
+
+
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>50){
+
+header.style.position="fixed";
+
+header.style.background="rgba(250,247,243,.95)";
+
+header.style.backdropFilter="blur(12px)";
+
+header.style.boxShadow="0 10px 35px rgba(0,0,0,.05)";
+
+header.style.padding="22px 0";
+
+}
+
+else{
+
+header.style.position="absolute";
+
+header.style.background="transparent";
+
+header.style.boxShadow="none";
+
+header.style.padding="42px 0";
+
+}
+
+});
+
+
+
+const heroImage=document.querySelector(".hero-photo img");
+
+
+
+window.addEventListener("load",()=>{
+
+heroImage.style.transform="scale(1.03)";
+
+});
+
+</script>
 
 </body>
 
