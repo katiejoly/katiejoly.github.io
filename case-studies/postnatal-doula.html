@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study: Postnatal Doula Copy — Katie Joly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blush:#E9D9CF;
+    --blush-deep:#DEC6B8;
+    --ink:#2B2E4A;
+    --ink-soft:#4A4E6E;
+    --sage:#7C8B6F;
+    --sage-deep:#5F6E52;
+    --gold:#C9A066;
+    --paper:#FBF7F3;
+    --line:rgba(43,46,74,0.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  a{color:inherit;}
+
+  .hero{
+    background:var(--blush);
+    padding:6rem 6vw 5rem;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    right:-10%;
+    top:-20%;
+    width:60%;
+    height:140%;
+    background:radial-gradient(circle at center, var(--blush-deep) 0%, transparent 70%);
+    opacity:0.6;
+  }
+  .eyebrow{
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    color:var(--sage-deep);
+    font-weight:600;
+    margin-bottom:1.4rem;
+    position:relative;
+    z-index:1;
+  }
+  .hero h1{
+    font-size:clamp(2.2rem, 5vw, 3.6rem);
+    max-width:15ch;
+    line-height:1.08;
+    position:relative;
+    z-index:1;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--sage-deep);
+  }
+  .hero p.sub{
+    max-width:46ch;
+    margin-top:1.6rem;
+    font-size:1.08rem;
+    color:var(--ink-soft);
+    position:relative;
+    z-index:1;
+  }
+  .hero-meta{
+    display:flex;
+    gap:2.4rem;
+    margin-top:3rem;
+    flex-wrap:wrap;
+    position:relative;
+    z-index:1;
+  }
+  .hero-meta div{font-size:0.9rem;}
+  .hero-meta span{
+    display:block;
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--sage-deep);
+    margin-bottom:0.3rem;
+    font-weight:600;
+  }
+  .disclosure{
+    display:inline-block;
+    margin-top:3rem;
+    padding:0.7rem 1.1rem;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:3px;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    position:relative;
+    z-index:1;
+  }
+
+  section{
+    padding:5rem 6vw;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:1.2rem;
+    margin-bottom:2.6rem;
+  }
+  .section-head .num{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    color:var(--gold);
+    font-size:1rem;
+  }
+  .section-head h2{
+    font-size:1.6rem;
+  }
+  .lead{
+    max-width:62ch;
+    color:var(--ink-soft);
+    margin-bottom:2.6rem;
+  }
+
+  .diagnosis{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(230px,1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .diagnosis div{
+    background:var(--paper);
+    padding:1.6rem 1.4rem;
+  }
+  .diagnosis h3{
+    font-size:0.95rem;
+    font-family:'Work Sans', sans-serif;
+    font-weight:600;
+    margin-bottom:0.5rem;
+  }
+  .diagnosis p{
+    font-size:0.88rem;
+    color:var(--ink-soft);
+    margin:0;
+  }
+
+  .compare-wrap{
+    background:var(--ink);
+    color:var(--paper);
+  }
+  .compare-wrap .section-head h2{color:var(--paper);}
+  .compare-wrap .section-head .num{color:var(--gold);}
+  .compare-wrap .lead{color:rgba(251,247,243,0.65);}
+
+  .compare{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    gap:0;
+    align-items:stretch;
+  }
+  .panel{
+    padding:2.2rem 2rem;
+  }
+  .panel.before{background:rgba(251,247,243,0.05);}
+  .panel.after{background:rgba(124,139,111,0.14);}
+  .panel-label{
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    font-weight:600;
+    margin-bottom:1.2rem;
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+  }
+  .panel.before .panel-label{color:#C99A8E;}
+  .panel.after .panel-label{color:#A9BC9A;}
+  .panel-label .dot{
+    width:6px;height:6px;border-radius:50%;
+    background:currentColor;
+  }
+  .panel p{
+    font-size:0.92rem;
+    color:rgba(251,247,243,0.85);
+    margin:0 0 0.9rem;
+  }
+  .panel.before p{
+    font-style:italic;
+    color:rgba(251,247,243,0.55);
+  }
+  .panel h4{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:1.1rem;
+    margin:0 0 0.7rem;
+    color:var(--paper);
+  }
+  .panel ul{
+    margin:0 0 1.1rem;
+    padding-left:1.1rem;
+    font-size:0.92rem;
+    color:rgba(251,247,243,0.85);
+  }
+  .panel li{margin-bottom:0.4rem;}
+  .panel .price{
+    font-size:0.88rem;
+    color:rgba(251,247,243,0.7);
+  }
+  .seam{
+    width:1px;
+    background:linear-gradient(to bottom, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
+    position:relative;
+  }
+  .seam::before{
+    content:"→";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:var(--gold);
+    color:var(--ink);
+    width:28px;height:28px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:0.85rem;
+  }
+
+  .rationale-list{
+    display:grid;
+    gap:1.6rem;
+  }
+  .rationale-item{
+    display:grid;
+    grid-template-columns:2.4rem 1fr;
+    gap:1.2rem;
+    padding-bottom:1.6rem;
+    border-bottom:1px solid var(--line);
+  }
+  .rationale-item:last-child{border-bottom:none;}
+  .rationale-item .mark{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    color:var(--gold);
+    font-size:1.3rem;
+  }
+  .rationale-item h4{
+    font-family:'Work Sans', sans-serif;
+    font-weight:600;
+    font-size:0.98rem;
+    margin-bottom:0.35rem;
+  }
+  .rationale-item p{
+    color:var(--ink-soft);
+    font-size:0.92rem;
+    margin:0;
+  }
+
+  footer{
+    padding:4rem 6vw 5rem;
+    text-align:center;
+  }
+  footer p{
+    color:var(--ink-soft);
+    font-size:0.88rem;
+    max-width:44ch;
+    margin:0.6rem auto 0;
+  }
+  footer .display{font-size:1.3rem;text-align:center;margin:0 auto;}
+
+  @media (max-width:760px){
+    .compare{grid-template-columns:1fr;}
+    .seam{width:100%;height:1px;background:linear-gradient(to right, transparent, var(--gold) 20%, var(--gold) 80%, transparent);}
+    .seam::before{content:"↓";}
+    .hero-meta{gap:1.6rem;}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <p class="eyebrow">Copywriting case study · Spec project</p>
+  <h1>Finding the offer <em>hidden</em> in a doula's own words</h1>
+  <p class="sub">A live independent postnatal doula site had a genuine, caring voice — and copy that made it hard to find what she actually offered. Here's how I rebuilt the page around what a tired new parent needs to read first.</p>
+  <div class="hero-meta">
+    <div><span>Source</span>Solent Parenting, postnatal doula page</div>
+    <div><span>Focus</span>Copywriting &amp; content structure</div>
+  </div>
+  <p class="disclosure">This is an unsolicited spec project, not client work. Not affiliated with or endorsed by Solent Parenting — created to demonstrate my approach to birth and women's health copywriting.</p>
+</div>
+
+<section>
+  <div class="section-head"><span class="num">01</span><h2>What wasn't working</h2></div>
+  <p class="lead">The original page had real warmth and real expertise. But the structure worked against both — hiding the offer under links, asides, and run-on sentences before a reader ever got to what she does or what it costs.</p>
+  <div class="diagnosis">
+    <div>
+      <h3>No hierarchy</h3>
+      <p>Dense paragraphs with no headers or breaks. Everything reads at the same weight, so nothing stands out.</p>
+    </div>
+    <div>
+      <h3>Offer hidden</h3>
+      <p>Services, pricing, and contact info don't appear until the very end — after three outbound links to other people's sites.</p>
+    </div>
+    <div>
+      <h3>No clear next step</h3>
+      <p>A reader has to hunt for how to actually book, with no CTA guiding them there.</p>
+    </div>
+    <div>
+      <h3>Voice undersold</h3>
+      <p>The warmth is genuine, but "&"-heavy run-ons and rambling asides dilute it instead of letting it land.</p>
+    </div>
+  </div>
+</section>
+
+<div class="compare-wrap">
+  <section>
+    <div class="section-head"><span class="num">02</span><h2>Before &amp; after</h2></div>
+    <p class="lead">Same information, same warmth — reordered so the reader gets what they need in the first ten seconds, not the last.</p>
+    <div class="compare">
+      <div class="panel before">
+        <div class="panel-label"><span class="dot"></span>Original</div>
+        <p>"So many people still don't know about Postnatal Doulas! ... As a Postnatal Doula my role is to nurture &amp; care for the new mother or birthing person. I am there to listen, hold the space, support, encourage, talk too, feed &amp; facilitate self-care &amp; sleep..."</p>
+        <p>Three external links to other sites appear before any mention of services or price. Pricing and contact details are the last two lines on the page.</p>
+      </div>
+      <div class="seam"></div>
+      <div class="panel after">
+        <div class="panel-label"><span class="dot"></span>Rewrite</div>
+        <h4>Postnatal Doula Support</h4>
+        <p style="font-style:italic;color:rgba(251,247,243,0.6);margin-bottom:1rem;">Bringing you meals, quiet company, and a steady hand while you find your feet.</p>
+        <ul>
+          <li>A calm, steady presence to lean on</li>
+          <li>Newborn care: bathing, feeding, settling</li>
+          <li>Meals, light housework, and errands</li>
+          <li>Support for partners, siblings, and pets</li>
+        </ul>
+        <p class="price">£30/hr (plus travel) · one-off visits £45–£80</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section>
+  <div class="section-head"><span class="num">03</span><h2>Why these changes</h2></div>
+  <div class="rationale-list">
+    <div class="rationale-item">
+      <span class="mark">a</span>
+      <div>
+        <h4>Led with the offer, not the context</h4>
+        <p>A sleep-deprived parent scanning this page needs to know what she does and what it costs in the first few lines — not after three links elsewhere.</p>
+      </div>
+    </div>
+    <div class="rationale-item">
+      <span class="mark">b</span>
+      <div>
+        <h4>Turned services into a scannable list</h4>
+        <p>The original folded six distinct offerings into one paragraph. Breaking them into a list lets a tired reader take it in at a glance.</p>
+      </div>
+    </div>
+    <div class="rationale-item">
+      <span class="mark">c</span>
+      <div>
+        <h4>Kept the warmth, cut the noise</h4>
+        <p>The voice — nurturing, unhurried — is the whole appeal of hiring a doula. I preserved it while removing filler asides and "&"-stacked sentences.</p>
+      </div>
+    </div>
+    <div class="rationale-item">
+      <span class="mark">d</span>
+      <div>
+        <h4>Gave it one clear next step</h4>
+        <p>A single, direct CTA at the end, instead of contact details tucked in as an afterthought.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="display">Want to see this approach applied to your site?</p>
+  <p>I write and design for birth and women's health professionals who want their expertise to read as clearly as it shows up in their work.</p>
+</footer>
+
+</body>
+</html>
