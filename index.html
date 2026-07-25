@@ -102,6 +102,9 @@ p{color:var(--soft);}
 .service p{margin-bottom:26px;}
 .service a{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-dark);}
 
+/* PROCESS (4 steps) */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:50px;}
+
 /* REWRITES (case study cards) */
 .rewrites-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:70px;margin-top:20px;}
 .rewrite-card{padding-top:24px;border-top:1px solid var(--line);}
@@ -116,7 +119,8 @@ p{color:var(--soft);}
 .about-copy p{font-size:21px;margin-bottom:30px;max-width:720px;}
 .about-note{padding:36px;background:var(--warm);border-left:3px solid var(--accent);}
 .about-note h4{font-family:'Cormorant Garamond',serif;font-size:30px;margin-bottom:18px;font-weight:500;}
-.about-note p{font-size:17px;}
+.about-note p{font-size:17px;margin-bottom:18px;}
+.about-note p:last-child{margin-bottom:0;}
 
 /* SUBTLE FADE */
 .fade{opacity:0;transform:translateY(40px);transition:all .9s ease;}
@@ -175,6 +179,7 @@ nav a.active:not(.nav-button)::after{width:100%;}
 .editorial-grid,.about-grid{grid-template-columns:1fr;gap:50px;}
 .editorial-line{display:none;}
 .services-grid,.features-grid,.rewrites-grid{grid-template-columns:1fr;}
+.process-grid{grid-template-columns:repeat(2,1fr);}
 .footer-name{font-size:76px;}
 .footer-bottom{flex-direction:column;align-items:flex-start;}
 }
@@ -194,6 +199,7 @@ h2{font-size:46px;margin-bottom:42px;}
 .editorial-copy p,.about-copy p{font-size:19px;}
 .testimonial blockquote{font-size:34px;}
 .feature h3,.service h3,.faq-item h3{font-size:30px;}
+.process-grid{grid-template-columns:1fr;}
 .footer-name{font-size:58px;}
 .footer-links,.footer-social{gap:18px;}
 .primary-button{width:100%;text-align:center;}
@@ -232,7 +238,7 @@ h2{font-size:46px;margin-bottom:42px;}
 <p class="eyebrow">COPYWRITER • WEBSITE SPECIALIST • ONGOING COPY SUPPORT</p>
 <h1>Helping birth and women's health professionals become impossible to overlook.</h1>
 <p>Your work changes lives. The words introducing people to your business should reflect the same care, confidence, and compassion they experience when they meet you.</p>
-<p>Great copy does more than explain what you do. It helps people understand your approach, trust your expertise, and feel confident taking the next step. As your practice grows, I'll help ensure everything you share continues to reflect the quality of care you provide.</p>
+<p>Great copy does more than explain what you do. It helps people understand your approach, trust your expertise, and feel confident taking the next step.</p>
 <a class="primary-button" href="mailto:kitjoly@gmail.com?subject=Let's%20Talk">Let's Connect</a>
 </div>
 </div>
@@ -259,7 +265,7 @@ h2{font-size:46px;margin-bottom:42px;}
 <div class="services-grid">
 <div class="service fade">
 <div class="service-number">01</div>
-<h3>Website Copy</h3>
+<h3>Website Strategy and Copy</h3>
 <p>Beautiful design gets attention. Confident copy earns trust—and helps the right people take the next step.</p>
 <p>Whether you're building a new website or refreshing an existing one, we'll create copy that reflects your voice, answers important questions, and helps the right people feel confident taking the next step.</p>
 <a href="mailto:kitjoly@gmail.com">Explore the service →</a>
@@ -316,13 +322,14 @@ h2{font-size:46px;margin-bottom:42px;}
 <p>Most practice owners don't struggle because they don't know what they do. They struggle because they're busy doing it. Between caring for clients, answering questions, managing schedules, and planning what's next, communication often becomes one more thing competing for their attention.</p>
 <p>I love helping people communicate the care, knowledge, and compassion they bring to their work every day. Whether we're creating a new website, introducing a new service, updating patient resources, or refining existing communication, my goal is to make it easier for your expertise, professionalism, and heart to come through in everything you share.</p>
 <p>I especially enjoy working with businesses that educate with honesty, lead with compassion, and genuinely want people to feel informed and supported. If that sounds like your practice, I think we'd work well together.</p>
-<p>The right communication doesn't just explain what you do. It helps people feel understood, builds trust before they ever reach out, and makes it easier for the right people to recognize they've found the right place.</p>
 </div>
 <aside class="about-note fade">
-<h4>My philosophy</h4>
-<p>Great copy doesn't persuade people into trusting you. It helps them recognize that they already can.</p>
-<br>
-<p>When people feel understood, trust follows naturally.</p>
+<h4>My Philosophy</h4>
+<p>Copy doesn't create trust. It reveals the trust you've already earned.</p>
+<p>I believe that if marketing improves your effectiveness but sacrifices respect, honesty, or integrity along the way, it's not success—it's wasted work.</p>
+<p>When we work together, my goal isn't to make you feel like you've fallen short. It's to help you recognize the strengths you've already built and bring them to the surface.</p>
+<p>I see every project as a partnership. I listen first, ask thoughtful questions, and create something that feels true to your practice, your values, and the people you serve.</p>
+<p>At the end of the day, I want to close my computer knowing I've helped someone who spends their days helping others. That's the kind of business I want to build, and the kind of work I'm proud to put my name on.</p>
 </aside>
 </div>
 </div>
@@ -333,19 +340,24 @@ h2{font-size:46px;margin-bottom:42px;}
 <div class="container">
 <p class="section-label">PROCESS</p>
 <h2>A simple process designed to make your life easier.</h2>
-<div class="services-grid">
+<div class="process-grid">
 <div class="service fade">
 <div class="service-number">01</div>
+<h3>The First Impression Review™</h3>
+<p>Before we change a single word, I review your website through the eyes of a first-time visitor to uncover what's building trust, what's causing hesitation, and where the biggest opportunities are.</p>
+</div>
+<div class="service fade">
+<div class="service-number">02</div>
 <h3>Learn</h3>
 <p>We start with a conversation about your practice, your goals, your audience, and how you want people to experience your business.</p>
 </div>
 <div class="service fade">
-<div class="service-number">02</div>
+<div class="service-number">03</div>
 <h3>Create</h3>
 <p>I transform your expertise into compelling copy that sounds like you, supports your goals, and helps people feel confident reaching out.</p>
 </div>
 <div class="service fade">
-<div class="service-number">03</div>
+<div class="service-number">04</div>
 <h3>Refine</h3>
 <p>Together we'll polish every detail until it feels natural, authentic, and ready to represent your business with confidence.</p>
 </div>
