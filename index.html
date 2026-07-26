@@ -145,6 +145,42 @@ p{color:var(--soft);}
 .faq-item h3{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;margin-bottom:16px;}
 .faq-item p{max-width:760px;}
 
+/* RESOURCES */
+.resources{background:var(--warm);}
+.resources-intro{font-size:21px;max-width:680px;margin-bottom:70px;}
+.resources-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;align-items:stretch;}
+.resource-card{
+display:flex;
+flex-direction:column;
+background:var(--cream);
+border:1px solid var(--line);
+border-radius:6px;
+padding:48px 40px;
+transition:.4s ease;
+height:100%;
+}
+.resource-card:hover{
+transform:translateY(-6px);
+box-shadow:0 30px 60px rgba(64,56,51,.08);
+border-color:var(--accent);
+}
+.resource-icon{width:34px;height:2px;background:var(--accent);margin-bottom:28px;}
+.resource-card h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;color:var(--text);margin-bottom:18px;line-height:1.15;}
+.resource-card p{font-size:17px;color:var(--soft);margin-bottom:34px;flex-grow:1;}
+.resource-card a.resource-link{
+font-family:'Manrope',sans-serif;
+font-size:13px;
+font-weight:600;
+letter-spacing:.14em;
+text-transform:uppercase;
+color:var(--accent-dark);
+align-self:flex-start;
+padding-bottom:4px;
+border-bottom:1px solid transparent;
+}
+.resource-card:hover a.resource-link{border-bottom:1px solid var(--accent-dark);}
+.resources-note{text-align:center;margin-top:56px;font-size:13px;letter-spacing:.08em;color:var(--soft);opacity:.85;}
+
 /* CTA */
 .cta{background:linear-gradient(135deg,#C99581,#B27B67);text-align:center;padding:180px 0;}
 .cta-inner{max-width:760px;margin:auto;}
@@ -179,6 +215,7 @@ nav a.active:not(.nav-button)::after{width:100%;}
 .editorial-grid,.about-grid{grid-template-columns:1fr;gap:50px;}
 .editorial-line{display:none;}
 .services-grid,.features-grid,.rewrites-grid{grid-template-columns:1fr;}
+.resources-grid{grid-template-columns:repeat(2,1fr);}
 .process-grid{grid-template-columns:repeat(2,1fr);}
 .footer-name{font-size:76px;}
 .footer-bottom{flex-direction:column;align-items:flex-start;}
@@ -200,6 +237,8 @@ h2{font-size:46px;margin-bottom:42px;}
 .testimonial blockquote{font-size:34px;}
 .feature h3,.service h3,.faq-item h3{font-size:30px;}
 .process-grid{grid-template-columns:1fr;}
+.resources-grid{grid-template-columns:1fr;}
+.resource-card{padding:40px 32px;}
 .footer-name{font-size:58px;}
 .footer-links,.footer-social{gap:18px;}
 .primary-button{width:100%;text-align:center;}
@@ -220,6 +259,7 @@ h2{font-size:46px;margin-bottom:42px;}
 <a href="#services">Services</a>
 <a href="#case-study">Portfolio</a>
 <a href="#process">Process</a>
+<a href="#resources">Resources</a>
 <a href="#contact">Contact</a>
 <a class="nav-button" href="mailto:kitjoly@gmail.com">Start the conversation</a>
 </nav>
@@ -440,6 +480,42 @@ h2{font-size:46px;margin-bottom:42px;}
 </div>
 </section>
 
+<!-- COMPLIMENTARY RESOURCES -->
+<section id="resources" class="resources">
+<div class="container">
+<p class="section-label fade">COMPLIMENTARY RESOURCES</p>
+<h2 class="fade">A few things to make marketing feel a little more approachable.</h2>
+<p class="resources-intro fade">Whether you're refreshing your website, planning social media content, or simply looking for a little inspiration, I hope these resources help make marketing feel a bit more approachable.</p>
+
+<div class="resources-grid">
+
+<div class="resource-card fade">
+<div class="resource-icon"></div>
+<h3>Instagram Conversation Starters</h3>
+<p>Thirty thoughtful prompts designed to help you share your expertise, connect with your audience, and show the heart behind your work.</p>
+<a class="resource-link" href="resources/instagram-conversation-starters.pdf" download>Download Guide →</a>
+</div>
+
+<div class="resource-card fade">
+<div class="resource-icon"></div>
+<h3>Homepage Planning Workbook</h3>
+<p>A guided workbook to help you organize your ideas before writing or redesigning your website.</p>
+<a class="resource-link" href="resources/homepage-planning-workbook.pdf" download>Download Guide →</a>
+</div>
+
+<div class="resource-card fade">
+<div class="resource-icon"></div>
+<h3>Brand Photography Shot List</h3>
+<p>A curated list of lifestyle, workspace, and detail photos that help tell the story of your practice and create a cohesive online presence.</p>
+<a class="resource-link" href="resources/brand-photography-shot-list.pdf" download>Download Guide →</a>
+</div>
+
+</div>
+
+<p class="resources-note fade">No sign-up required.</p>
+</div>
+</section>
+
 <!-- FINAL CTA -->
 <section id="contact" class="cta">
 <div class="container">
@@ -468,6 +544,7 @@ h2{font-size:46px;margin-bottom:42px;}
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#process">Process</a>
+<a href="#resources">Resources</a>
 <a href="mailto:kitjoly@gmail.com">Contact</a>
 </div>
 </div>
