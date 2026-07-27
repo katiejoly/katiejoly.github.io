@@ -164,8 +164,35 @@ transform:translateY(-6px);
 box-shadow:0 30px 60px rgba(64,56,51,.08);
 border-color:var(--accent);
 }
-.resource-icon{width:34px;height:2px;background:var(--accent);margin-bottom:28px;}
+.field-guide-label{font-family:'Manrope',sans-serif;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-dark);margin-bottom:14px;display:block;}
 .resource-card h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;color:var(--text);margin-bottom:18px;line-height:1.15;}
+
+/* RESOURCE COVER MOCKUPS */
+.resource-cover{position:relative;height:216px;border-radius:2px 8px 8px 2px;margin:-4px -4px 30px -4px;overflow:hidden;box-shadow:0 26px 44px -16px rgba(64,56,51,.4),6px 6px 0 -3px rgba(64,56,51,.07);transition:transform .5s ease,box-shadow .5s ease;}
+.resource-card:hover .resource-cover{transform:translateY(-4px) rotate(-.5deg);box-shadow:0 34px 54px -16px rgba(64,56,51,.45),6px 6px 0 -3px rgba(64,56,51,.09);}
+.resource-cover::before{content:"";position:absolute;left:0;top:0;bottom:0;width:9px;background:linear-gradient(90deg,rgba(0,0,0,.32),rgba(0,0,0,0));z-index:3;}
+.resource-cover::after{content:"";position:absolute;right:-3px;top:6px;bottom:6px;width:6px;background:repeating-linear-gradient(180deg,#fff 0 2px,#EFE7DF 2px 4px);box-shadow:2px 0 4px rgba(64,56,51,.18);border-radius:0 3px 3px 0;z-index:2;}
+.cover-motif{position:absolute;inset:0;z-index:0;}
+.cover-face{position:relative;z-index:1;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:26px 22px;}
+.cover-kicker{font-family:'Manrope',sans-serif;font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:700;margin-bottom:14px;}
+.cover-title{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:500;line-height:1.2;}
+.cover-rule{width:28px;height:1px;margin:16px 0;}
+.cover-num{font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:.1em;font-style:italic;}
+.cover-1{background:linear-gradient(155deg,#C99581,#A0654D);}
+.cover-1 .cover-kicker,.cover-1 .cover-num{color:rgba(255,255,255,.8);}
+.cover-1 .cover-title{color:#fff;}
+.cover-1 .cover-rule{background:rgba(255,255,255,.42);}
+.cover-1 .cover-motif{background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.15) 0 2px,transparent 2px 22px);}
+.cover-2{background:linear-gradient(155deg,#4B4038,#382F2A);}
+.cover-2 .cover-kicker,.cover-2 .cover-num{color:rgba(244,238,232,.65);}
+.cover-2 .cover-title{color:#F4EEE8;}
+.cover-2 .cover-rule{background:rgba(244,238,232,.3);}
+.cover-2 .cover-motif{background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;}
+.cover-3{background:linear-gradient(155deg,#F4EEE8,#E4D9CF);}
+.cover-3 .cover-kicker,.cover-3 .cover-num{color:var(--accent-dark);}
+.cover-3 .cover-title{color:var(--text);}
+.cover-3 .cover-rule{background:var(--accent);}
+.cover-3 .cover-motif{background-image:radial-gradient(circle at 50% 50%,transparent 0 26px,rgba(178,123,103,.16) 27px 29px,transparent 30px 50px,rgba(178,123,103,.16) 51px 53px,transparent 54px 74px,rgba(178,123,103,.16) 75px 77px);}
 .resource-card p{font-size:17px;color:var(--soft);margin-bottom:34px;flex-grow:1;}
 .resource-card a.resource-link{
 font-family:'Manrope',sans-serif;
@@ -490,21 +517,48 @@ h2{font-size:46px;margin-bottom:42px;}
 <div class="resources-grid">
 
 <div class="resource-card fade">
-<div class="resource-icon"></div>
+<div class="resource-cover cover-1">
+<div class="cover-motif"></div>
+<div class="cover-face">
+<span class="cover-kicker">Field Guide</span>
+<span class="cover-title">Conversation<br>Starters</span>
+<span class="cover-rule"></span>
+<span class="cover-num">No. 01</span>
+</div>
+</div>
+<span class="field-guide-label">Field Guide 01</span>
 <h3>Instagram Conversation Starters</h3>
 <p>Thirty thoughtful prompts designed to help you share your expertise, connect with your audience, and show the heart behind your work.</p>
 <a class="resource-link" href="resources/instagram-conversation-starters.pdf" download>Download Guide →</a>
 </div>
 
 <div class="resource-card fade">
-<div class="resource-icon"></div>
+<div class="resource-cover cover-2">
+<div class="cover-motif"></div>
+<div class="cover-face">
+<span class="cover-kicker">Field Guide</span>
+<span class="cover-title">Homepage<br>Planning</span>
+<span class="cover-rule"></span>
+<span class="cover-num">No. 02</span>
+</div>
+</div>
+<span class="field-guide-label">Field Guide 02</span>
 <h3>Homepage Planning Workbook</h3>
 <p>A guided workbook to help you organize your ideas before writing or redesigning your website.</p>
 <a class="resource-link" href="resources/homepage-planning-workbook.pdf" download>Download Guide →</a>
 </div>
 
 <div class="resource-card fade">
-<div class="resource-icon"></div>
+<div class="resource-cover cover-3">
+<div class="cover-motif"></div>
+<div class="cover-face">
+<span class="cover-kicker">Field Guide</span>
+<span class="cover-title">Brand<br>Photography</span>
+<span class="cover-rule"></span>
+<span class="cover-num">No. 03</span>
+</div>
+</div>
+<span class="field-guide-label">Field Guide 03</span>
 <h3>Brand Photography Shot List</h3>
 <p>A curated list of lifestyle, workspace, and detail photos that help tell the story of your practice and create a cohesive online presence.</p>
 <a class="resource-link" href="resources/brand-photography-shot-list.pdf" download>Download Guide →</a>
