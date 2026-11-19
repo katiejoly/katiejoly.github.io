@@ -30,590 +30,180 @@ img{display:block;width:100%;}
 a{text-decoration:none;color:inherit;transition:.35s;}
 .container{max-width:var(--container);margin:auto;padding:0 42px;}
 
-/* ==========================
-HEADER — sits above the hero banner (not overlaid on the photo)
-========================== */
+/* Header */
 header{position:relative;width:100%;z-index:100;padding:34px 0;background:var(--cream);}
 .header-inner{display:flex;justify-content:space-between;align-items:center;}
 .logo img{height:60px;width:auto;}
-nav{display:flex;align-items:center;gap:42px;}
-nav a{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;}
-.nav-button{padding:15px 28px;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-radius:40px;}
-.nav-button:hover{background:white;}
+.nav-button{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;padding:15px 28px;background:rgba(255,255,255,.85);border-radius:40px;}
+.nav-button:hover{background:var(--white);}
 
-/* ==========================
-HERO — Mobile-friendly with better face positioning
-========================== */
-.hero{
-position:relative;
-height:640px;
-overflow:hidden;
-display:flex;
-align-items:center;
-}
+/* Hero */
+.hero{position:relative;height:560px;overflow:hidden;display:flex;align-items:center;}
 .hero-image{position:absolute;inset:0;z-index:0;}
 .hero-image img{width:100%;height:100%;object-fit:cover;object-position:center top;}
-.hero-overlay{
-position:absolute;
-inset:0;
-background:linear-gradient(
-90deg,
-rgba(251,248,245,.88) 0%,
-rgba(251,248,245,.76) 38%,
-rgba(251,248,245,.18) 72%,
-rgba(251,248,245,0) 100%
-);
-z-index:1;
-}
-.hero-content{
-position:relative;
-z-index:2;
-max-width:600px;
-opacity:0;
-transform:translateY(24px);
-transition:opacity .9s ease, transform .9s ease;
-}
-body.loaded .hero-content{opacity:1;transform:translateY(0);}
-.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--accent-dark);margin-bottom:20px;}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:500;line-height:1;letter-spacing:-.02em;margin-bottom:28px;}
-.hero p{font-size:21px;color:var(--soft);max-width:500px;margin-bottom:36px;}
-.primary-button{display:inline-block;padding:18px 38px;background:var(--accent);color:white;border-radius:40px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;}
-.primary-button:hover{background:var(--accent-dark);transform:translateY(-2px);}
-.secondary-button{display:inline-block;padding:17px 36px;background:transparent;color:var(--text);border:1px solid var(--text);border-radius:40px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;}
-.secondary-button:hover{background:var(--text);color:var(--cream);transform:translateY(-2px);}
-.hero-buttons{display:flex;gap:20px;flex-wrap:wrap;}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(251,248,245,.88) 0%,rgba(251,248,245,.76) 38%,rgba(251,248,245,.18) 72%,rgba(251,248,245,0) 100%);}
+.hero-content{position:relative;z-index:2;max-width:600px;}
+.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--accent-dark);margin-bottom:20px;line-height:1.4;}
+.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:64px;font-weight:500;line-height:1;letter-spacing:-.02em;margin-bottom:28px;color:var(--text);}
+.hero p{font-size:21px;color:var(--soft);max-width:500px;margin-bottom:36px;line-height:1.6;}
+.primary-button{display:inline-block;padding:18px 38px;background:var(--accent);color:#fff;border-radius:40px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;box-shadow:0 14px 30px rgba(0,0,0,.08);}
+.primary-button:hover{background:var(--accent-dark);}
 
-/* SECTION DEFAULTS */
-section{padding:140px 0;}
-.section-label{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent-dark);margin-bottom:18px;}
-h2{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:500;line-height:1.05;margin-bottom:70px;}
-p{color:var(--soft);}
+/* Sections */
+.section-label{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent-dark);margin-bottom:40px;line-height:1.4;}
 
-/* EDITORIAL INTRO */
-.editorial{background:white;position:relative;}
-.editorial-grid{display:grid;grid-template-columns:220px 1fr;gap:70px;align-items:start;}
-.editorial-line{width:2px;height:170px;background:var(--accent);margin-top:8px;}
-.editorial-copy h2{margin-bottom:32px;}
-.editorial-copy p{font-size:22px;max-width:760px;margin-bottom:28px;}
-
-/* SERVICES */
-.services{background:var(--warm);}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:70px;}
+/* Services */
+.services{background:var(--warm);padding:110px 0;}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:60px;}
 .service{padding-top:24px;border-top:1px solid var(--line);}
-.service-number{font-family:'Cormorant Garamond',serif;font-size:74px;color:var(--accent);line-height:1;margin-bottom:18px;}
-.service h3{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:500;margin-bottom:20px;color:var(--text);}
-.service p{margin-bottom:26px;}
-.service a{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-dark);}
+.service-number{font-family:'Cormorant Garamond',Georgia,serif;font-size:74px;color:var(--accent);line-height:1;margin-bottom:18px;}
+.service h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;font-weight:500;margin-bottom:14px;color:var(--text);line-height:1.15;}
+.service p{font-size:16px;color:var(--soft);line-height:1.7;}
 
-/* PROCESS (4 steps) */
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:50px;}
+/* Work */
+.work{background:var(--white);padding:110px 0;}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:50px;}
+.work-card{padding-top:24px;border-top:1px solid var(--line);}
+.work-tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent-dark);margin-bottom:16px;line-height:1.4;}
+.work-card h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:500;margin-bottom:14px;color:var(--text);line-height:1.2;}
+.work-detail{font-size:16px;color:var(--soft);line-height:1.7;margin-bottom:24px;}
+.card-button{display:inline-block;padding:14px 28px;background:var(--accent);color:#fff;border-radius:40px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;box-shadow:0 14px 30px rgba(0,0,0,.08);}
+.card-button:hover{background:var(--accent-dark);}
 
-/* REWRITES (case study cards) */
-.rewrites-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:70px;margin-top:20px;}
-.rewrite-card{padding-top:24px;border-top:1px solid var(--line);}
-.rewrite-tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent-dark);margin-bottom:16px;}
-.rewrite-card h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;margin-bottom:16px;color:var(--text);}
-.rewrite-card p{margin-bottom:26px;}
-.rewrite-card a.primary-button{padding:15px 30px;font-size:12px;}
-
-/* ABOUT */
-.about{background:white;}
-.about-grid{display:grid;grid-template-columns:1fr 320px;gap:120px;align-items:start;}
-.about-copy p{font-size:21px;margin-bottom:30px;max-width:720px;}
-.about-note{padding:36px;background:var(--warm);border-left:3px solid var(--accent);}
-.about-note h4{font-family:'Cormorant Garamond',serif;font-size:30px;margin-bottom:18px;font-weight:500;}
-.about-note p{font-size:17px;margin-bottom:18px;}
-.about-note p:last-child{margin-bottom:0;}
-
-/* SUBTLE FADE */
-.fade{opacity:0;transform:translateY(40px);transition:all .9s ease;}
-.fade.visible{opacity:1;transform:translateY(0);}
-
-/* TESTIMONIAL */
-.testimonial{background:#fff;padding:170px 0;}
-.testimonial-wrap{max-width:920px;margin:auto;text-align:center;}
-.testimonial blockquote{font-family:'Cormorant Garamond',serif;font-size:52px;line-height:1.45;font-weight:500;color:var(--text);margin-bottom:42px;}
-.testimonial-author{font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent-dark);}
-
-/* FEATURES */
-.features{background:var(--warm);}
-.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:70px;margin-top:60px;}
-.feature{padding-bottom:34px;border-bottom:1px solid var(--line);}
-.feature h3{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:500;margin-bottom:18px;}
-.feature p{max-width:470px;}
-
-/* FAQ */
-.faq{background:white;}
-.faq-item{padding:36px 0;border-bottom:1px solid var(--line);}
-.faq-item h3{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;margin-bottom:16px;}
-.faq-item p{max-width:760px;}
-
-/* RESOURCES */
-.resources{background:var(--warm);}
-.resources-intro{font-size:21px;max-width:680px;margin-bottom:70px;}
-.resources-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;align-items:stretch;}
-.resource-card{
-display:flex;
-flex-direction:column;
-background:var(--cream);
-border:1px solid var(--line);
-border-radius:6px;
-padding:48px 40px;
-transition:.4s ease;
-height:100%;
-}
-.resource-card:hover{
-transform:translateY(-6px);
-box-shadow:0 30px 60px rgba(64,56,51,.08);
-border-color:var(--accent);
-}
-.field-guide-label{font-family:'Manrope',sans-serif;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-dark);margin-bottom:14px;display:block;}
-.resource-card h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;color:var(--text);margin-bottom:18px;line-height:1.15;}
-
-/* RESOURCE COVER MOCKUPS */
-.resource-cover{position:relative;height:216px;border-radius:2px 8px 8px 2px;margin:-4px -4px 30px -4px;overflow:hidden;box-shadow:0 26px 44px -16px rgba(64,56,51,.4),6px 6px 0 -3px rgba(64,56,51,.07);transition:transform .5s ease,box-shadow .5s ease;}
-.resource-card:hover .resource-cover{transform:translateY(-4px) rotate(-.5deg);box-shadow:0 34px 54px -16px rgba(64,56,51,.45),6px 6px 0 -3px rgba(64,56,51,.09);}
-.resource-cover::before{content:"";position:absolute;left:0;top:0;bottom:0;width:9px;background:linear-gradient(90deg,rgba(0,0,0,.32),rgba(0,0,0,0));z-index:3;}
-.resource-cover::after{content:"";position:absolute;right:-3px;top:6px;bottom:6px;width:6px;background:repeating-linear-gradient(180deg,#fff 0 2px,#EFE7DF 2px 4px);box-shadow:2px 0 4px rgba(64,56,51,.18);border-radius:0 3px 3px 0;z-index:2;}
-.cover-motif{position:absolute;inset:0;z-index:0;}
-.cover-face{position:relative;z-index:1;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:26px 22px;}
-.cover-kicker{font-family:'Manrope',sans-serif;font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:700;margin-bottom:14px;}
-.cover-title{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:500;line-height:1.2;}
-.cover-rule{width:28px;height:1px;margin:16px 0;}
-.cover-num{font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:.1em;font-style:italic;}
-.cover-1{background:linear-gradient(155deg,#C99581,#A0654D);}
-.cover-1 .cover-kicker,.cover-1 .cover-num{color:rgba(255,255,255,.8);}
-.cover-1 .cover-title{color:#fff;}
-.cover-1 .cover-rule{background:rgba(255,255,255,.42);}
-.cover-1 .cover-motif{background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.15) 0 2px,transparent 2px 22px);}
-.cover-2{background:linear-gradient(155deg,#4B4038,#382F2A);}
-.cover-2 .cover-kicker,.cover-2 .cover-num{color:rgba(244,238,232,.65);}
-.cover-2 .cover-title{color:#F4EEE8;}
-.cover-2 .cover-rule{background:rgba(244,238,232,.3);}
-.cover-2 .cover-motif{background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;}
-.cover-3{background:linear-gradient(155deg,#F4EEE8,#E4D9CF);}
-.cover-3 .cover-kicker,.cover-3 .cover-num{color:var(--accent-dark);}
-.cover-3 .cover-title{color:var(--text);}
-.cover-3 .cover-rule{background:var(--accent);}
-.cover-3 .cover-motif{background-image:radial-gradient(circle at 50% 50%,transparent 0 26px,rgba(178,123,103,.16) 27px 29px,transparent 30px 50px,rgba(178,123,103,.16) 51px 53px,transparent 54px 74px,rgba(178,123,103,.16) 75px 77px);}
-.resource-card p{font-size:17px;color:var(--soft);margin-bottom:34px;flex-grow:1;}
-.resource-card a.resource-link{
-font-family:'Manrope',sans-serif;
-font-size:13px;
-font-weight:600;
-letter-spacing:.14em;
-text-transform:uppercase;
-color:var(--accent-dark);
-align-self:flex-start;
-padding-bottom:4px;
-border-bottom:1px solid transparent;
-}
-.resource-card:hover a.resource-link{border-bottom:1px solid var(--accent-dark);}
-.resources-note{text-align:center;margin-top:56px;font-size:13px;letter-spacing:.08em;color:var(--soft);opacity:.85;}
+/* About */
+.about{background:var(--cream);padding:110px 0;}
+.about h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:56px;font-weight:500;line-height:1.05;margin-bottom:36px;color:var(--text);}
+.about p.lead{font-size:20px;color:var(--soft);max-width:760px;line-height:1.75;}
 
 /* CTA */
-.cta{background:linear-gradient(135deg,#C99581,#B27B67);text-align:center;padding:180px 0;}
-.cta-inner{max-width:760px;margin:auto;}
-.cta h2{color:white;margin-bottom:26px;}
-.cta p{color:rgba(255,255,255,.92);font-size:22px;margin-bottom:46px;}
+.cta{background:linear-gradient(135deg,var(--accent),var(--accent-dark));text-align:center;padding:120px 0;}
+.cta-inner{max-width:760px;margin:auto;padding:0 42px;}
+.cta h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:56px;font-weight:500;line-height:1.05;color:#fff;margin-bottom:22px;}
+.cta p{color:rgba(255,255,255,.92);font-size:20px;margin-bottom:40px;}
+.cta-button{display:inline-block;padding:18px 38px;background:#fff;color:var(--accent-dark);border-radius:40px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;}
+.cta-button:hover{background:var(--cream);}
 
-/* FOOTER */
-.site-footer{background:var(--cream);padding:120px 0 60px;}
-.footer-name{font-size:110px;margin-bottom:18px;line-height:.95;}
-.footer-tagline{max-width:560px;font-size:20px;}
-.footer-divider{margin:70px 0 45px;height:1px;background:var(--line);}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:30px;}
-.footer-links,.footer-social{display:flex;gap:30px;flex-wrap:wrap;}
-.footer-links a,.footer-social a{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;}
-.footer-copy{margin-top:55px;font-size:14px;color:var(--soft);}
+/* Footer */
+.site-footer{background:var(--cream);padding:90px 0 60px;}
+.footer-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:96px;line-height:.95;margin-bottom:18px;color:var(--text);}
+.footer-tag{max-width:560px;font-size:18px;color:var(--soft);}
 
-/* PREMIUM HOVERS */
-.service,.feature,.faq-item{transition:.35s ease;}
-.service:hover{transform:translateY(-8px);}
-.feature:hover{transform:translateY(-6px);}
-.primary-button{transition:.35s ease;box-shadow:0 14px 30px rgba(0,0,0,.08);}
-.primary-button:hover{transform:translateY(-3px);box-shadow:0 24px 45px rgba(0,0,0,.12);}
-nav a{position:relative;}
-nav a:not(.nav-button)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--accent);transition:.3s;}
-nav a:not(.nav-button):hover::after{width:100%;}
-nav a.active:not(.nav-button)::after{width:100%;}
-
-/* RESPONSIVE */
 @media (max-width:1100px){
 .hero{height:auto;padding:70px 0;}
 .hero h1{font-size:52px;}
-.editorial-grid,.about-grid{grid-template-columns:1fr;gap:50px;}
-.editorial-line{display:none;}
-.services-grid,.features-grid,.rewrites-grid{grid-template-columns:1fr;}
-.resources-grid{grid-template-columns:repeat(2,1fr);}
-.process-grid{grid-template-columns:repeat(2,1fr);}
-.footer-name{font-size:76px;}
-.footer-bottom{flex-direction:column;align-items:flex-start;}
+.services-grid,.work-grid{grid-template-columns:1fr;}
+.footer-name{font-size:72px;}
 }
-
 @media (max-width:768px){
 .container{padding:0 24px;}
 header{padding:22px 0;}
 .logo img{height:48px;}
-nav a:not(.nav-button){display:none;}
-.hero{height:auto;padding:50px 0 60px;}
-.hero-overlay{background:linear-gradient(90deg, rgba(251,248,245,.92) 0%, rgba(251,248,245,.85) 50%, rgba(251,248,245,.4) 85%, rgba(251,248,245,0) 100%);}
+.hero{padding:50px 0 60px;}
+.hero-overlay{background:linear-gradient(90deg,rgba(251,248,245,.92) 0%,rgba(251,248,245,.85) 50%,rgba(251,248,245,.4) 85%,rgba(251,248,245,0) 100%);}
 .hero-image img{object-position:center 20%;}
 .hero h1{font-size:40px;}
 .hero p{font-size:18px;}
-section{padding:90px 0;}
-h2{font-size:46px;margin-bottom:42px;}
-.editorial-copy p,.about-copy p{font-size:19px;}
-.testimonial blockquote{font-size:34px;}
-.feature h3,.service h3,.faq-item h3{font-size:30px;}
-.process-grid{grid-template-columns:1fr;}
-.resources-grid{grid-template-columns:1fr;}
-.resource-card{padding:40px 32px;}
-.footer-name{font-size:58px;}
-.footer-links,.footer-social{gap:18px;}
-.primary-button{width:100%;text-align:center;}
+.services,.work,.about{padding:80px 0;}
+.about h2,.cta h2{font-size:42px;}
+.about p.lead{font-size:18px;}
+.cta{padding:90px 0;}
+.cta-inner{padding:0 24px;}
+.site-footer{padding:70px 0 50px;}
+.footer-name{font-size:56px;}
+.primary-button,.cta-button{width:100%;text-align:center;}
 }
 </style>
 </head>
 <body>
 
 <header>
-<div class="container">
-<div class="header-inner">
-<div class="logo">
-<!-- Replace with your logo -->
-<img src="images/logo.png" alt="Katie Joly">
-</div>
-<nav>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#case-study">Portfolio</a>
-<a href="#resources">Resources</a>
-<a href="#contact">Contact</a>
-<a class="nav-button" href="mailto:kitjoly@gmail.com">Start the conversation</a>
-</nav>
-</div>
-</div>
+  <div class="container header-inner">
+    <a class="logo" href="index.html"><img src="images/logo.png" alt="Katie Joly"></a>
+    <a class="nav-button" href="mailto:kitjoly@gmail.com">Email Katie</a>
+  </div>
 </header>
 
 <section class="hero">
-<div class="hero-image">
-<!-- Replace hero.jpg with the panoramic image we created -->
-<img src="images/hero.jpg" alt="Katie Joly working at her desk">
-</div>
-<div class="hero-overlay"></div>
-<div class="container">
-<div class="hero-content">
-<p class="eyebrow">WOMEN’S HEALTH + WELLNESS COMMUNICATIONS</p>
-<p style="font-size:13px;letter-spacing:.08em;color:var(--soft);margin-top:-12px;margin-bottom:24px;"></p>
-<h1>Helping care-focused businesses communicate the experience they’ve already built.</h1>
-<p>I translate expertise and services into clear, thoughtful communication—from websites and client-facing content to ongoing marketing support.</p>
-<div class="hero-buttons">
-<a class="primary-button" href="#services">Explore Services</a>
-<a class="secondary-button" href="#process">Start with a First Impression Review™</a>
-</div>
-</div>
-</div>
+  <div class="hero-image"><img src="images/hero.jpg" alt="Katie Joly working at her desk"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="eyebrow">Copywriting &amp; Communications</p>
+    <h1>Clear words for the work you do.</h1>
+    <p>I help businesses explain what they do, stay in touch with their audience, and get their next project out into the world.</p>
+    <a class="primary-button" href="mailto:kitjoly@gmail.com">Email Katie</a>
+  </div>
 </section>
 
-<section class="editorial">
-<div class="container">
-<div class="editorial-grid fade">
-<div class="editorial-line"></div>
-<div class="editorial-copy">
-<p class="section-label">WELCOME</p>
-<h2>Exceptional care deserves communication that reflects it.</h2>
-<p>I partner with women’s health, wellness, and care-focused businesses to create clear, thoughtful communication—from website copy and client-facing content to ongoing marketing support.</p>
-<p>The goal is simple: help your business communicate what you do, make information easier to navigate, and give the people you serve a clearer path forward.</p>
-</div>
-</div>
-</div>
+<section class="services">
+  <div class="container">
+    <p class="section-label">How I can help</p>
+    <div class="services-grid">
+      <div class="service">
+        <div class="service-number">01</div>
+        <h3>Website copy</h3>
+        <p>Websites written or rewritten, page by page.</p>
+      </div>
+      <div class="service">
+        <div class="service-number">02</div>
+        <h3>Content</h3>
+        <p>Emails, newsletters, and client resources.</p>
+      </div>
+      <div class="service">
+        <div class="service-number">03</div>
+        <h3>Communications &amp; events</h3>
+        <p>Editorial support and event coordination.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="services" class="services">
-<div class="container">
-<p class="section-label">SERVICES</p>
-<h2>How we can work together.</h2>
-<p class="section-intro" style="font-size:21px;max-width:720px;margin-bottom:60px;">Whether you need a stronger website, better patient resources, or ongoing writing support, we’ll focus on what your practice needs most.</p>
-<div class="services-grid">
-<div class="service fade">
-<div class="service-number">01</div>
-<h3>Strategy & Conversion</h3>
-<p>Clarify your positioning, patient journey, and path from first impression to inquiry.</p>
-<a href="mailto:kitjoly@gmail.com">Explore the service →</a>
-</div>
-<div class="service fade">
-<div class="service-number">02</div>
-<h3>Website & Patient Experience</h3>
-<p>Create clearer websites and patient-facing content that make it easier to understand, trust, and take the next step.</p>
-<a href="mailto:kitjoly@gmail.com">Ask more →</a>
-</div>
-<div class="service fade">
-<div class="service-number">03</div>
-<h3>Ongoing Marketing Support</h3>
-<p>Keep your marketing moving with thoughtful strategy, content, campaigns, and communications support.</p>
-<a href="mailto:kitjoly@gmail.com">Inquire →</a>
-</div>
-</div>
-</div>
+<section class="work">
+  <div class="container">
+    <p class="section-label">Selected work</p>
+    <div class="work-grid">
+      <div class="work-card">
+        <p class="work-tag">Spec project &middot; Website audit &amp; copy</p>
+        <h3>A postnatal doula's website, reorganized</h3>
+        <p class="work-detail">Her warmth and expertise were buried under links and long paragraphs. I rebuilt the page so a tired new parent sees what she offers, and what it costs, in the first ten seconds.</p>
+        <a class="card-button" href="case-studies/postnatal-doula.html">See the rewrite &rarr;</a>
+      </div>
+      <div class="work-card">
+        <p class="work-tag">Spec project &middot; Wix redesign &amp; brand voice</p>
+        <h3>A pelvic health practice, rebuilt</h3>
+        <p class="work-detail">A cluttered DIY practice site rebuilt with one palette, one type pairing, and one clear booking path, scoped to work inside the Wix setup a small practice already has.</p>
+        <a class="card-button" href="case-studies/pelvic-floor-redesign.html">See the redesign &rarr;</a>
+      </div>
+      <div class="work-card">
+        <p class="work-tag">Ongoing &middot; Bluffton, SC</p>
+        <h3>Communications and events for 3x4 Publishing</h3>
+        <p class="work-detail">Communications, editorial development, and event coordination for a local children's-book imprint.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- CASE STUDY -->
-<section id="case-study" class="editorial">
-<div class="container">
-<p class="section-label">PORTFOLIO</p>
-<h2>Selected Work</h2>
-<div class="rewrites-grid">
-<div class="rewrite-card fade">
-<p class="rewrite-tag">Website Audit • Information Architecture • Website Copy</p>
-<h3>A postnatal doula's website, reorganized</h3>
-<p>This project shows how thoughtful copy can improve clarity without changing what makes a business feel human. I reorganized a postnatal doula's website so exhausted new parents could immediately understand what she offered while preserving the warmth and personality that made her the right choice.</p>
-<a class="primary-button" href="case-studies/postnatal-doula.html">See the Rewrite →</a>
-</div>
-<div class="rewrite-card fade">
-<p class="rewrite-tag">Wix Redesign • Visual Design • Brand Voice</p>
-<h3>A pelvic health practice, rebuilt</h3>
-<p>A cluttered, dated practice website gets a full visual and written overhaul—cleaner structure, a calmer palette, and copy that helps prospective patients quickly understand the practice and what makes it different.</p>
-<a class="primary-button" href="case-studies/pelvic-floor-redesign.html">See the Redesign →</a>
-</div>
-</div>
-</div>
+<section class="about">
+  <div class="container">
+    <p class="section-label">About</p>
+    <h2>Meet Katie</h2>
+    <p class="lead">Before writing, I spent thirteen years in massage therapy and women's wellness, and became a yoga teacher in 2016. I trained as a copywriter in 2022. These days I write for care-focused businesses and support 3x4 Publishing, a children's-book imprint here in Bluffton, with communications and events. Living in the heart of the Lowcountry with my loving husband and our four wonderful children.</p>
+  </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="about">
-<div class="container">
-<div class="about-grid">
-<div class="about-copy fade">
-<p class="section-label">ABOUT</p>
-<h2>Meet Katie</h2>
-<p>My work is rooted in women’s health, patient education, and the belief that exceptional care deserves equally thoughtful communication.
-</p>
-<p>With more than thirteen years of experience in massage therapy and wellness, my background has given me a firsthand understanding of how patients seek information, build trust, and make decisions about their care.</p>
-<p>Today, I partner with women’s health and reproductive care practices to translate complex expertise into clear, compassionate communication—from websites and patient education resources to ongoing content that helps patients feel informed and supported from their very first interaction.</p>
-<p>My connection to this work became deeply personal through my own experiences with pregnancy, birth, and motherhood, deepening my appreciation for the wisdom and compassion women’s health professionals bring to families during some of life’s most significant moments.</p>
-</div>
-</div>
+<section class="cta">
+  <div class="cta-inner">
+    <h2>Have a project in mind?</h2>
+    <p>Tell me about it: kitjoly@gmail.com</p>
+    <a class="cta-button" href="mailto:kitjoly@gmail.com">Email Katie</a>
+  </div>
 </section>
 
-<!-- PROCESS -->
-<section id="process" class="editorial">
-<div class="container">
-<p class="section-label">PROCESS</p>
-<h2>A process that keeps things simple.</h2>
-<div class="process-grid">
-<div class="service fade">
-<div class="service-number">01</div>
-<h3>The First Impression Review™</h3>
-<p>We start by looking at your patient-facing communication through fresh eyes. I’ll identify what’s working, where things may be getting lost, and where there are opportunities to improve the experience.
-</p>
-</div>
-<div class="service fade">
-<div class="service-number">02</div>
-<h3>Learn</h3>
-<p>We talk about your practice, your goals, your audience, and what you need the work to accomplish.</p>
-</div>
-<div class="service fade">
-<div class="service-number">03</div>
-<h3>Create</h3>
-<p>I take what you’ve shared and turn it into clear, polished communication that feels natural to your practice.</p>
-</div>
-<div class="service fade">
-<div class="service-number">04</div>
-<h3>Refine</h3>
-<p>You review, we make adjustments, and we make sure everything feels right before it goes live.</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- TRUSTED WRITING PARTNER -->
-<section class="editorial">
-<div class="container">
-<div class="editorial-grid fade">
-<div class="editorial-line"></div>
-<div class="editorial-copy">
-<p class="section-label">Ongoing Support</p>
-<h2>Keep me in your corner.</h2>
-<p>Your practice doesn’t stop evolving when a project is finished. Services change, new programs take shape, resources need refreshing, and new pages, newsletters, and patient communications need thoughtful attention.</p>
-<p>Instead of starting from scratch each time, you can continue working with someone who already understands your practice, your voice, and your goals. Whether you need occasional support or an ongoing creative partner, we can shape the relationship around what your practice needs—and where it’s going.</p>
-</div>
-</div>
-</div>
-</section>
-
-
-<!-- COMPLIMENTARY RESOURCES -->
-<section id="resources" class="resources">
-<div class="container">
-<p class="section-label fade">COMPLIMENTARY RESOURCES</p>
-<h2 class="fade">A few things to make marketing feel a little more approachable.</h2>
-<p class="resources-intro fade">Whether you're refreshing your website, planning social media content, or simply looking for a little inspiration, I hope these resources help make marketing feel a bit more approachable.</p>
-
-<div class="resources-grid">
-
-<div class="resource-card fade">
-<div class="resource-cover cover-1">
-<div class="cover-motif"></div>
-<div class="cover-face">
-<span class="cover-kicker">Field Guide</span>
-<span class="cover-title">Conversation<br>Starters</span>
-<span class="cover-rule"></span>
-<span class="cover-num">No. 01</span>
-</div>
-</div>
-<span class="field-guide-label">Field Guide 01</span>
-<h3>Instagram Conversation Starters</h3>
-<p>Thirty thoughtful prompts designed to help you share your expertise, connect with your audience, and show the heart behind your work.</p>
-<a class="resource-link" href="resources/instagram-conversation-starters.pdf" download>Download Guide →</a>
-</div>
-
-<div class="resource-card fade">
-<div class="resource-cover cover-2">
-<div class="cover-motif"></div>
-<div class="cover-face">
-<span class="cover-kicker">Field Guide</span>
-<span class="cover-title">Homepage<br>Planning</span>
-<span class="cover-rule"></span>
-<span class="cover-num">No. 02</span>
-</div>
-</div>
-<span class="field-guide-label">Field Guide 02</span>
-<h3>Homepage Planning Workbook</h3>
-<p>A guided workbook to help you organize your ideas before writing or redesigning your website.</p>
-<a class="resource-link" href="resources/homepage-planning-workbook.pdf" download>Download Guide →</a>
-</div>
-
-<div class="resource-card fade">
-<div class="resource-cover cover-3">
-<div class="cover-motif"></div>
-<div class="cover-face">
-<span class="cover-kicker">Field Guide</span>
-<span class="cover-title">Brand<br>Photography</span>
-<span class="cover-rule"></span>
-<span class="cover-num">No. 03</span>
-</div>
-</div>
-<span class="field-guide-label">Field Guide 03</span>
-<h3>Brand Photography Shot List</h3>
-<p>A curated list of lifestyle, workspace, and detail photos that help tell the story of your practice and create a cohesive online presence.</p>
-<a class="resource-link" href="resources/brand-photography-shot-list.pdf" download>Download Guide →</a>
-</div>
-
-</div>
-
-<p class="resources-note fade">No sign-up required.</p>
-</div>
-</section>
-
-<!-- FINAL CTA -->
-<section id="contact" class="cta">
-<div class="container">
-<div class="cta-inner fade">
-<p class="section-label" style="color:rgba(255,255,255,.85);">LET'S WORK TOGETHER</p>
-<h2>Let’s make your next project easier.</h2>
-<p>Whether we're working together on a single project or continuing to collaborate as your practice grows, I'll help create thoughtful messaging that reflects the quality of your care, supports your goals, and gives you one less thing to worry about.</p>
-<a class="primary-button" href="mailto:kitjoly@gmail.com?subject=Let's%20Talk">Let's Talk</a>
-</div>
-</div>
-</section>
-
-<!-- LUXURY FOOTER -->
 <footer class="site-footer">
-<div class="container">
-<div class="footer-top">
-<div class="footer-brand fade">
-<p class="section-label">THANK YOU FOR VISITING</p>
-<h2 class="footer-name">Katie Joly</h2>
-<p class="footer-tagline">Clear communication for the practices changing women's healthcare.</p>
-</div>
-</div>
-<div class="footer-divider"></div>
-<div class="footer-bottom">
-<div class="footer-links">
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#process">Process</a>
-<a href="#resources">Resources</a>
-<a href="mailto:kitjoly@gmail.com">Contact</a>
-</div>
-</div>
-<div class="footer-copy">© 2022 Katie Joly • </div>
-</div>
+  <div class="container">
+    <div class="footer-name">Katie Joly</div>
+    <p class="footer-tag">Copywriting &amp; communications for care-focused businesses.</p>
+  </div>
 </footer>
-
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(link=>{
-link.addEventListener('click',e=>{
-e.preventDefault();
-const target=document.querySelector(link.getAttribute('href'));
-if(target){
-target.scrollIntoView({behavior:'smooth',block:'start'});
-}
-});
-});
-
-const reveals=document.querySelectorAll('.fade');
-const revealObserver=new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('visible');
-revealObserver.unobserve(entry.target);
-}
-});
-},{threshold:.15,rootMargin:"0px 0px -80px 0px"});
-reveals.forEach(item=>revealObserver.observe(item));
-
-/* Sticky header on scroll (header stays in normal flow at rest) */
-const header=document.querySelector("header");
-window.addEventListener("scroll",()=>{
-if(window.scrollY>40){
-header.style.boxShadow="0 12px 40px rgba(0,0,0,.06)";
-}else{
-header.style.boxShadow="none";
-}
-});
-
-/* Hero parallax */
-const hero=document.querySelector(".hero-image img");
-window.addEventListener("scroll",()=>{
-if(hero){
-const y=window.pageYOffset;
-hero.style.transform=`translateY(${y*0.18}px) scale(1.05)`;
-}
-});
-
-document.querySelectorAll(".primary-button").forEach(button=>{
-button.addEventListener("mouseenter",()=>{button.style.transform="translateY(-3px)";});
-button.addEventListener("mouseleave",()=>{button.style.transform="translateY(0px)";});
-});
-
-if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){
-document.querySelectorAll("*").forEach(el=>{
-el.style.scrollBehavior="auto";
-el.style.transition="none";
-el.style.animation="none";
-});
-}
-
-const sections=document.querySelectorAll("section[id]");
-const navLinks=document.querySelectorAll("nav a");
-window.addEventListener("scroll",()=>{
-let current="";
-sections.forEach(section=>{
-const top=section.offsetTop-140;
-if(pageYOffset>=top){current=section.getAttribute("id");}
-});
-navLinks.forEach(link=>{
-link.classList.remove("active");
-if(link.getAttribute("href")==="#"+current){link.classList.add("active");}
-});
-});
-
-window.addEventListener("load",()=>{
-document.body.classList.add("loaded");
-});
-</script>
 
 </body>
 </html>
