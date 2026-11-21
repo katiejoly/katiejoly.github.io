@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Morrowfield Midwifery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+--cream:#FAF7F1;
+--warm:#F2EDE3;
+--white:#FFFFFF;
+--text:#3C3833;
+--soft:#787065;
+--accent:#84A08A;
+--accent-dark:#68866F;
+--line:#E6DED0;
+}
+body{font-family:'Karla',sans-serif;font-size:18px;line-height:1.8;background:var(--cream);color:var(--text);-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+.container{max-width:1100px;margin:auto;padding:0 42px;}
+.spec-label{text-align:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--soft);padding:14px 0;background:var(--warm);border-bottom:1px solid var(--line);}
+header{padding:28px 0;}
+.header-inner{display:flex;justify-content:space-between;align-items:center;}
+.wordmark{font-family:'Fraunces',Georgia,serif;font-size:26px;font-weight:600;letter-spacing:.01em;}
+.topnav a{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--soft);margin-left:30px;}
+.topnav a:hover{color:var(--accent-dark);}
+
+.hero{padding:110px 0 70px;text-align:center;}
+.hero h1{font-family:'Fraunces',Georgia,serif;font-size:64px;font-weight:500;line-height:1.1;letter-spacing:-.01em;margin-bottom:22px;}
+.hero .sub{font-size:21px;color:var(--soft);margin-bottom:22px;}
+.hero p.copy{max-width:640px;margin:0 auto 40px;color:var(--soft);}
+.btn{display:inline-block;padding:17px 36px;background:var(--accent);color:#fff;border-radius:6px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;box-shadow:0 12px 26px rgba(104,134,111,.25);}
+.btn:hover{background:var(--accent-dark);}
+
+.section-label{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent-dark);margin-bottom:34px;}
+
+.philosophy{background:var(--white);padding:100px 0;}
+.philosophy-inner{max-width:760px;}
+.philosophy h2,.services h2,.stories h2,.visit h2{font-family:'Fraunces',Georgia,serif;font-size:44px;font-weight:500;line-height:1.12;margin-bottom:22px;}
+.philosophy p{color:var(--soft);font-size:19px;}
+
+.services{background:var(--warm);padding:100px 0;}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:10px;}
+.service{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:34px 30px;}
+.service h3{font-family:'Fraunces',Georgia,serif;font-size:26px;font-weight:600;margin-bottom:12px;}
+.service p{font-size:16px;color:var(--soft);line-height:1.7;}
+
+.care{background:var(--white);padding:100px 0;text-align:center;}
+.care h2{font-family:'Fraunces',Georgia,serif;font-size:44px;font-weight:500;line-height:1.1;margin-bottom:20px;}
+.care p{max-width:620px;margin:0 auto 40px;color:var(--soft);}
+
+.stories{background:var(--cream);padding:100px 0;}
+.stories-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;}
+.story{padding-top:24px;border-top:1px solid var(--line);}
+.story p{font-family:'Fraunces',Georgia,serif;font-size:21px;font-style:italic;line-height:1.55;color:var(--text);margin-bottom:16px;}
+.story span{font-size:14px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--soft);}
+
+.visit{background:var(--warm);padding:100px 0;}
+.visit-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:70px;align-items:start;}
+.visit p{color:var(--soft);margin-bottom:32px;max-width:560px;}
+.hours{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:32px 30px;}
+.hours h3{font-family:'Fraunces',Georgia,serif;font-size:24px;font-weight:600;margin-bottom:14px;}
+.hours p{color:var(--soft);font-size:16px;margin:0 0 6px;}
+.hours .note{font-size:14px;color:var(--soft);margin-top:14px;}
+
+
+.photo-band{background:var(--cream);padding:0 0 100px;}
+.photo-band img{width:100%;height:540px;object-fit:cover;object-position:center 30%;border-radius:14px;display:block;box-shadow:0 24px 50px rgba(60,56,51,.12);}
+footer{padding:60px 0;text-align:center;color:var(--soft);font-size:15px;}
+footer .wordmark{display:block;margin-bottom:8px;}
+</style>
+</head>
+<body>
+
+<div class="spec-label">Fictional practice &middot; Spec work &middot; <a href="before.html" style="color:inherit;text-decoration:underline;">See the before</a></div>
+
+<header>
+  <div class="container header-inner">
+    <span class="wordmark">Morrowfield Midwifery</span>
+    <nav class="topnav">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Visit</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Pregnancy care with time for you.</h1>
+    <p class="sub">Your questions. Your choices. A midwife who listens.</p>
+    <p class="copy">We care for you during pregnancy and after your baby arrives, with regular visits, clear answers and support as you find your way.</p>
+    <a class="btn" href="#">Request your first visit</a>
+  </div>
+</section>
+
+<section class="photo-band">
+  <div class="container">
+    <img src="midwife-hero.jpg" alt="An expectant mother cradling her belly by a sunlit window">
+  </div>
+</section>
+
+<section class="philosophy">
+  <div class="container">
+    <p class="section-label">Our philosophy</p>
+    <div class="philosophy-inner">
+      <h2>Care that starts with listening.</h2>
+      <p>Every pregnancy is different, so every plan here is too. We explain your options in plain language, answer every question, and decide each next step together. You will always know what is happening, and why.</p>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="container">
+    <p class="section-label">Services</p>
+    <h2>What we do</h2>
+    <div class="services-grid">
+      <div class="service">
+        <h3>Prenatal consultations</h3>
+        <p>A first visit to talk through your health, your pregnancy and your hopes for birth, and to map out your care together.</p>
+      </div>
+      <div class="service">
+        <h3>Pregnancy appointments</h3>
+        <p>Regular, unhurried check-ins to see how you and your baby are doing, answer questions and plan what comes next.</p>
+      </div>
+      <div class="service">
+        <h3>Postnatal follow&#8209;up</h3>
+        <p>Care after your baby arrives: recovery, feeding support and time for the questions that come with new parenthood.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="care">
+  <div class="container">
+    <h2>Care, one visit at a time</h2>
+    <p>Talk through your questions, check on your pregnancy and plan what comes next. After birth, we're here for follow-up care, too.</p>
+    <a class="btn" href="#">Meet the midwives</a>
+  </div>
+</section>
+
+<section class="stories">
+  <div class="container">
+    <p class="section-label">Kind words</p>
+    <div class="stories-grid">
+      <div class="story">
+        <p>&ldquo;I never once felt rushed. Every question got a real answer, and I always knew what was happening next.&rdquo;</p>
+        <span>Sarah M.</span>
+      </div>
+      <div class="story">
+        <p>&ldquo;After a hard first birth, they gave me my confidence back. I felt looked after the whole way through.&rdquo;</p>
+        <span>Jess L.</span>
+      </div>
+      <div class="story">
+        <p>&ldquo;From the first phone call to the six-week check, everything was calm, clear and kind.&rdquo;</p>
+        <span>Rachel T.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="container">
+    <p class="section-label">New patients</p>
+    <div class="visit-grid">
+      <div>
+        <h2>Becoming a patient</h2>
+        <p>Call or email to book your first visit, and we will send a short form to fill in ahead of time. Plan for about an hour: a real conversation, not a rush. Bring your questions, all of them are welcome here.</p>
+        <a class="btn" href="#">Request your first visit</a>
+      </div>
+      <div class="hours">
+        <h3>Office hours</h3>
+        <p>Monday to Friday</p>
+        <p>9:00am &ndash; 4:30pm</p>
+        <p class="note">Closed weekends and holidays. For urgent concerns outside office hours, call the on-call line on your care card.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="wordmark">Morrowfield Midwifery</span>
+  Pregnancy and postnatal care
+</footer>
+
+</body>
+</html>

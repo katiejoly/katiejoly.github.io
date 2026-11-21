@@ -38,14 +38,14 @@ header{position:relative;width:100%;z-index:100;padding:34px 0;background:var(--
 .nav-button:hover{background:var(--white);}
 
 /* Hero */
-.hero{position:relative;height:560px;overflow:hidden;display:flex;align-items:center;}
+.hero{position:relative;height:620px;overflow:hidden;display:flex;align-items:center;}
 .hero-image{position:absolute;inset:0;z-index:0;}
 .hero-image img{width:100%;height:100%;object-fit:cover;object-position:center top;}
 .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(251,248,245,.88) 0%,rgba(251,248,245,.76) 38%,rgba(251,248,245,.18) 72%,rgba(251,248,245,0) 100%);}
-.hero-content{position:relative;z-index:2;max-width:600px;}
+.hero-content{position:relative;z-index:2;max-width:460px;margin-left:max(42px,calc((100% - var(--container))/2 + 42px));margin-right:42px;}
 .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--accent-dark);margin-bottom:20px;line-height:1.4;}
-.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:64px;font-weight:500;line-height:1;letter-spacing:-.02em;margin-bottom:28px;color:var(--text);}
-.hero p{font-size:21px;color:var(--soft);max-width:500px;margin-bottom:36px;line-height:1.6;}
+.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:88px;font-weight:500;line-height:1.02;letter-spacing:-.02em;margin-bottom:28px;color:var(--text);}
+.hero p{font-size:21px;color:var(--soft);max-width:420px;margin-bottom:36px;line-height:1.6;}
 .primary-button{display:inline-block;padding:18px 38px;background:var(--accent);color:#fff;border-radius:40px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;box-shadow:0 14px 30px rgba(0,0,0,.08);}
 .primary-button:hover{background:var(--accent-dark);}
 
@@ -54,26 +54,20 @@ header{position:relative;width:100%;z-index:100;padding:34px 0;background:var(--
 
 /* Services */
 .services{background:var(--warm);padding:110px 0;}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:60px;}
-.service{padding-top:24px;border-top:1px solid var(--line);}
-.service-number{font-family:'Cormorant Garamond',Georgia,serif;font-size:74px;color:var(--accent);line-height:1;margin-bottom:18px;}
-.service h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;font-weight:500;margin-bottom:14px;color:var(--text);line-height:1.15;}
-.service p{font-size:16px;color:var(--soft);line-height:1.7;}
+.section-lead{font-size:21px;color:var(--soft);max-width:720px;line-height:1.75;}
+.section-lead a{color:var(--accent-dark);font-weight:600;border-bottom:1px solid var(--accent);}
+.section-lead a:hover{color:var(--accent);}
 
-/* Work */
-.work{background:var(--white);padding:110px 0;}
-.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:50px;}
-.work-card{padding-top:24px;border-top:1px solid var(--line);}
-.work-tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent-dark);margin-bottom:16px;line-height:1.4;}
-.work-card h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:500;margin-bottom:14px;color:var(--text);line-height:1.2;}
-.work-detail{font-size:16px;color:var(--soft);line-height:1.7;margin-bottom:24px;}
-.card-button{display:inline-block;padding:14px 28px;background:var(--accent);color:#fff;border-radius:40px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;box-shadow:0 14px 30px rgba(0,0,0,.08);}
-.card-button:hover{background:var(--accent-dark);}
+/* Art */
+.art{background:var(--white);padding:110px 0;}
 
 /* About */
 .about{background:var(--cream);padding:110px 0;}
 .about h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:56px;font-weight:500;line-height:1.05;margin-bottom:36px;color:var(--text);}
 .about p.lead{font-size:20px;color:var(--soft);max-width:760px;line-height:1.75;}
+.about p.lead a{color:var(--accent-dark);font-weight:600;border-bottom:1px solid var(--accent);}
+.about p.lead a:hover{color:var(--accent);}
+.about-thanks{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:500;font-size:26px;color:var(--accent-dark);margin-top:36px;}
 
 /* CTA */
 .cta{background:linear-gradient(135deg,var(--accent),var(--accent-dark));text-align:center;padding:120px 0;}
@@ -90,8 +84,7 @@ header{position:relative;width:100%;z-index:100;padding:34px 0;background:var(--
 
 @media (max-width:1100px){
 .hero{height:auto;padding:70px 0;}
-.hero h1{font-size:52px;}
-.services-grid,.work-grid{grid-template-columns:1fr;}
+.hero h1{font-size:64px;}
 .footer-name{font-size:72px;}
 }
 @media (max-width:768px){
@@ -100,10 +93,11 @@ header{padding:22px 0;}
 .logo img{height:48px;}
 .hero{padding:50px 0 60px;}
 .hero-overlay{background:linear-gradient(90deg,rgba(251,248,245,.92) 0%,rgba(251,248,245,.85) 50%,rgba(251,248,245,.4) 85%,rgba(251,248,245,0) 100%);}
-.hero-image img{object-position:center 20%;}
-.hero h1{font-size:40px;}
+.hero-image img{object-position:68% 20%;}
+.hero h1{font-size:48px;}
+.hero-content{margin-left:0;margin-right:0;}
 .hero p{font-size:18px;}
-.services,.work,.about{padding:80px 0;}
+.services,.about,.art{padding:80px 0;}
 .about h2,.cta h2{font-size:42px;}
 .about p.lead{font-size:18px;}
 .cta{padding:90px 0;}
@@ -128,57 +122,16 @@ header{padding:22px 0;}
   <div class="hero-overlay"></div>
   <div class="container hero-content">
     <p class="eyebrow">Copywriting &amp; Communications</p>
-    <h1>Clear words for the work you do.</h1>
-    <p>I help businesses explain what they do, stay in touch with their audience, and get their next project out into the world.</p>
+    <h1>Katie Joly</h1>
+    <p>Creating space behind the scenes. Clear words for the work you do.</p>
     <a class="primary-button" href="mailto:kitjoly@gmail.com">Email Katie</a>
   </div>
 </section>
 
 <section class="services">
   <div class="container">
-    <p class="section-label">How I can help</p>
-    <div class="services-grid">
-      <div class="service">
-        <div class="service-number">01</div>
-        <h3>Website copy</h3>
-        <p>Websites written or rewritten, page by page.</p>
-      </div>
-      <div class="service">
-        <div class="service-number">02</div>
-        <h3>Content</h3>
-        <p>Emails, newsletters, and client resources.</p>
-      </div>
-      <div class="service">
-        <div class="service-number">03</div>
-        <h3>Communications &amp; events</h3>
-        <p>Editorial support and event coordination.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="work">
-  <div class="container">
-    <p class="section-label">Selected work</p>
-    <div class="work-grid">
-      <div class="work-card">
-        <p class="work-tag">Spec project &middot; Website audit &amp; copy</p>
-        <h3>A postnatal doula's website, reorganized</h3>
-        <p class="work-detail">Her warmth and expertise were buried under links and long paragraphs. I rebuilt the page so a tired new parent sees what she offers, and what it costs, in the first ten seconds.</p>
-        <a class="card-button" href="case-studies/postnatal-doula.html">See the rewrite &rarr;</a>
-      </div>
-      <div class="work-card">
-        <p class="work-tag">Spec project &middot; Wix redesign &amp; brand voice</p>
-        <h3>A pelvic health practice, rebuilt</h3>
-        <p class="work-detail">A cluttered DIY practice site rebuilt with one palette, one type pairing, and one clear booking path, scoped to work inside the Wix setup a small practice already has.</p>
-        <a class="card-button" href="case-studies/pelvic-floor-redesign.html">See the redesign &rarr;</a>
-      </div>
-      <div class="work-card">
-        <p class="work-tag">Ongoing &middot; Bluffton, SC</p>
-        <h3>Communications and events for 3x4 Publishing</h3>
-        <p class="work-detail">Communications, editorial development, and event coordination for a local children's-book imprint.</p>
-      </div>
-    </div>
+    <p class="section-label">What I do</p>
+    <p class="section-lead">Copywriting and communications for companies and individuals: websites, emails, and everything in between.</p>
   </div>
 </section>
 
@@ -186,7 +139,15 @@ header{padding:22px 0;}
   <div class="container">
     <p class="section-label">About</p>
     <h2>Meet Katie</h2>
-    <p class="lead">Before writing, I spent thirteen years in massage therapy and women's wellness, and became a yoga teacher in 2016. I became a certified copywriter in 2022. These days I write for care-focused businesses and support 3x4 Publishing, a children's-book imprint here in Bluffton, with communications and events. Living in the heart of the Lowcountry with my loving husband and our four wonderful children.</p>
+    <p class="lead">I'm a Licensed Massage Therapist, a Registered Yoga Teacher, and a Certified Copywriter. These days I write for care-focused businesses and support <a href="https://lincjollyart.com/3x4-publishing">3x4 Publishing</a> with communications and events. Living in the heart of the Lowcountry with my loving husband and our four wonderful children.</p>
+    <p class="about-thanks">Thanks so much</p>
+  </div>
+</section>
+
+<section class="art">
+  <div class="container">
+    <p class="section-label">Art</p>
+    <p class="section-lead">I also work on abstract and landscape paintings. You can check them out <a href="https://katiejoly.github.io/artworks">here</a>.</p>
   </div>
 </section>
 
